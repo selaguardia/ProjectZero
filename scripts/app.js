@@ -9,7 +9,7 @@ const pet = {
     },
     feedsPet() {
         if (pet.hungerLevel < 10) {
-            pet.hungerLevel++;
+            pet.hungerLevel--;
         }
     },
     turnLightsOff() {
@@ -22,23 +22,38 @@ const pet = {
         if (pet.boredLevel < 10) {
             pet.boredLevel++;
         }
+    },
+    renamePet() {
+       // pet.name =  userinput would go here // fix this
     }
 };
 
 
 const game = {
     timer: null,
+    time: 5,
     beginTimer() {
-        this.timer = setInterval(this.reduceTime, 2000);
+        game.timer = setInterval(game.reduceTime, 2000);
+        console.log('clicked');
+       // this.petDies();
     },
-    reduceTime() {
-        
+    // reduceTime : () => {
+    reduceTime () {
+        game.time--;
+        game.petDies()
+        pet.hungerLevel--;
     },
     petDies() {
-        console.log('Sorry you pet has died!')
-    }
-    
+        if (pet.hungerLevel <= 0 || pet.sleepLevel <= 0 || pet.boredLevel <= 0) {
+            clearInterval(game.timer);
+            console.log('Sorry you pet has died!');
+        }
+    }  
 };
+
+$('#startButton').on('click', game.beginTimer);
+
+$("#renameButton").on('click', pet.renamePet);
 
 // Buttons
 
@@ -47,10 +62,6 @@ $("#feedMe").on('click', pet.feedsPet);
 $("#lightsOff").on('click', pet.turnLightsOff);
 
 $("#play").on('click', pet.playWithPet);
-
-// timer
-
-// setInterval(progressTimer, 1000)
 
 // use for getting name from input box 
 // var value = $( this ).val();

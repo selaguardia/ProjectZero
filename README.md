@@ -9,37 +9,29 @@ Wireframe
 
 1. The user lands on page with screen greeting 
     - the user asks for their pets name
-    - includes input box and 'adopt' button
+    - includes input box and 'adopt' button (**currently the start button**)
 
-2. On the right side of the page there should be 3 buttons
-    - each one should have an indicator circle to show the progress
-    - Color will be green for satisfied, yellow for warning, red for dead
-    - Each should be labelled hunger, sleep, bored.
+2. On the right side of the page there should be 3 buttons --done
+    - each one should have an progress bar 
+    - Each should be labelled hunger, sleep, bored. 
 
-3. Hunger button
-    - Whent the light is green the pet shuld be happy and full
-        - Clicking the button should not let you feed pet
-    - When the light is yellow the pet should be sad hungry
-        - Clicking the button should feed the pet and turn the indicator circle green.
-    - When the light is red the pet has died
-        - Should allow you to revive pet
+3. Hunger button --done
+    - Whent the progress bar is full the pet should be happy and full
+        - Clicking the button should not let you feed pet --done
+        - When not full the button should increment hunger levels by 1 every time
 
-4. Sleep Button
-    - Whent the light is green the pet if fully awake
+4. Sleep Button --done
+    - Whent the progress bar is full the pet if fully awake
         - Button should not let you make them sleep
-    - When the light is yellow the pet is tired
-        - Should allow you to go to sleep
-    - When the light is red the pet dies of exhaustion
-        - Should allow you to revive pet
-5. Bored button
-    - Whent the light is green
+        - When sleepy the button should increment hunger levels by 1 everytime
+5. Bored button --done
+    - When the progress bar is full the pet should not be bored
         - button shouldnt work because pet is happy
-    - When the lgiht is yellow
-        - button should allow you to play with pet
-    - When the light is red pet should die of boredom
-        - button should let you revive pet
+    - When bored the button should allow you to increment boredom levels by 1 everytime
+6. Edit name button --done
+    - Allows you to rename the pet
 
 
-?. On the bottom left or right corner there should be an option to rename your pet.
+
 
     
