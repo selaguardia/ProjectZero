@@ -1,3 +1,5 @@
+console.log('works');
+
 const pet = {
     name: '',
     hungerLevel: 1,
@@ -7,16 +9,18 @@ const pet = {
         console.log('Game has started')
         // the timer should be called here
     },
-    feedsPet(event) {
-        
+    feedsPet() {
+        console.log('fed');
     },
 
 
 
 
 };
+ 
+const $feed = $("#feedMe");
 
-$("#feedMe").on('click', pet.feedsPet);
+$feed.on('click', pet.feedsPet);
 
 
 $("#lightsOff").on('click', function () {
