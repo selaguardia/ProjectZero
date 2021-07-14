@@ -14,6 +14,14 @@
       
     ></script>
     <script src="scripts/app.js" defer></script>
+    <script>
+        var progressBar = document.getElementById('p');
+        
+        function updateProgress(newValue) {
+        progressBar.value = newValue;
+        progressBar.getElementsByTagName('span')[0].textContent = newValue;
+        } 
+      </script>
 
 </head>
 <body>
@@ -23,11 +31,11 @@
         </div>
         <div class="rightSide">
             <p>Hello, your pet Eddie is...</p>
-            <p>Hungry</p>
-            <p>Tired</p>
-            <p>Bored</p>
+            <p>Hunger: <progress id="p" max=10><span>0</span>%</progress></p>
             <button id="feedMe">Feed Me</button>
+            <p>Sleepiness: <progress id="p" max=10><span>0</span>%</progress></p>
             <button id="lightsOff">Lights Off</button>
+            <p>Bordedom: <progress id="p" max=10><span>0</span>%</progress></p>
             <button id="play">Play with Me</button>
         </div>
         

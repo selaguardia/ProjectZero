@@ -1,4 +1,3 @@
-console.log('works');
 
 const pet = {
     name: '',
@@ -12,22 +11,22 @@ const pet = {
     feedsPet() {
         console.log('fed');
     },
+    turnLightsOff() {
+        console.log('lights');
+    },
+    playsPet() {
+        console.log('played');
+    },
 
 
 
 
 };
- 
-const $feed = $("#feedMe");
 
-$feed.on('click', pet.feedsPet);
+// Buttons
 
+$("#feedMe").on('click', pet.feedsPet);
 
-$("#lightsOff").on('click', function () {
-    console.log('Lights Off');
-})
+$("#lightsOff").on('click', pet.turnLightsOff);
 
-$("#play").on('click', function () {
-    console.log('Played with');
-})
-
+$("#play").on('click', pet.playsPet);
