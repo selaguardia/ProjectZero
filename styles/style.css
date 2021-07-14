@@ -1,0 +1,17 @@
+.container {
+border: 2px solid red;
+display: flex;
+justify-content: center;
+flex-direction: row;
+
+}
+
+.petImage {
+border: 2px solid green;
+padding: 20px;
+}
+
+.rightSide {
+border: 2px solid blue;
+padding: 20px;
+}
