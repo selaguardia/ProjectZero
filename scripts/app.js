@@ -1,12 +1,11 @@
-
 const pet = {
     name: '',
-    hungerLevel: 10,
+    hungerLevel: 0,
     sleepLevel: 10,
     boredLevel: 10,
     start(event) {
-        console.log('Game has started')
-        // the timer should be called here
+        console.log('Game has started');
+    
     },
     feedsPet() {
         pet.hungerLevel = 10;
@@ -19,6 +18,10 @@ const pet = {
     }
 };
 
+const game = {
+    
+}
+
 // Buttons
 
 $("#feedMe").on('click', pet.feedsPet);
@@ -30,3 +33,6 @@ $("#play").on('click', pet.playsPet);
 // timer
 
 // setInterval(progressTimer, 1000)
+
+// use for getting name from input box 
+// var value = $( this ).val();
