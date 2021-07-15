@@ -1,3 +1,5 @@
+
+
 const pet = {
     name: '',
     hungerLevel: 10,
@@ -23,8 +25,13 @@ const pet = {
             pet.boredLevel++;
         }
     },
+    startUp() {
+        let petName = window.prompt("Hello, what would you like to name your pet?");
+        $("#renamePet").on('click', pet.renamePet);
+    },
     renamePet() {
-       // pet.name =  userinput would go here // fix this
+        petName = window.prompt("Hello, what would you like to name your pet?");
+        $("#renamePet").on('click', pet.renamePet);
     },
     reduceHunger() {
         pet.hungerLevel--;
@@ -62,6 +69,8 @@ const game = {
     }  
 };
 
+pet.startUp();
+
 $('#startButton').on('click', game.beginTimer);
 
 $("#renameButton").on('click', pet.renamePet);
@@ -76,3 +85,6 @@ $("#play").on('click', pet.playWithPet);
 
 // use for getting name from input box 
 // var value = $( this ).val();
+
+//
+
