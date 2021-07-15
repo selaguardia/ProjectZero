@@ -53,7 +53,8 @@ const pet = {
         $("#inputName").toggle();
     },
     updateAge() {
-        document.getElementById("petAge").innerHTML = pet.age;
+      //  document.getElementById("petAge").innerHTML = pet.age;
+        $("#petAge").text(`${pet.age}`);
     }
 };
 
@@ -65,7 +66,7 @@ const game = {
         console.log('clicked');
         game.petDies();
         game.ageTimer();
-        pet.updateAge();
+        
         console.log(pet.age);
     },
     // reduceTime : () => {
@@ -111,6 +112,7 @@ const game = {
     },
     increaseAge() {
         pet.age += 7;
+        pet.updateAge();
     }
 };
 
