@@ -25,6 +25,15 @@ const pet = {
     },
     renamePet() {
        // pet.name =  userinput would go here // fix this
+    },
+    reduceHunger() {
+        pet.hungerLevel--;
+    },
+    reduceSleep() {
+        pet.sleepLevel--;
+    },
+    reduceBoredom() {
+        pet.boredLevel--;
     }
 };
 
@@ -40,8 +49,11 @@ const game = {
     // reduceTime : () => {
     reduceTime () {
         game.time--;
-        game.petDies()
-        pet.hungerLevel--;
+        pet.reduceHunger();
+        pet.reduceSleep();
+        pet.reduceBoredom();
+        game.petDies();
+        
     },
     petDies() {
         if (pet.hungerLevel <= 0 || pet.sleepLevel <= 0 || pet.boredLevel <= 0) {
