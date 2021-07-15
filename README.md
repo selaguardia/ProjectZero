@@ -35,7 +35,7 @@ Wireframe
 7. Edit name button --done
     - Allows you to rename the pet
 
-8. There should be a location to see the pets Age
+8. There should be a location to see the pets Age --done
     - pets age should increase every (i chose 1 min)
 
 9. Pet should morph at certain ages

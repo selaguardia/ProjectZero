@@ -53,7 +53,6 @@ const pet = {
         $("#inputName").toggle();
     },
     updateAge() {
-      //  document.getElementById("petAge").innerHTML = pet.age;
         $("#petAge").text(`${pet.age}`);
     }
 };
@@ -87,7 +86,9 @@ const game = {
     },
     petDies() {
         if (pet.hungerLevel <= 0 || pet.sleepLevel <= 0 || pet.boredLevel <= 0) {
+            $("#petPhoto").attr("src", "/images/cemetary.jpg");
             clearInterval(game.timer);
+            clearInterval(pet.age);
             console.log('Sorry you pet has died!');
         }
     },
@@ -106,14 +107,27 @@ const game = {
     },
     //increaseAge: null,
     ageTimer() {
-        game.increaseAge = setInterval(game.increaseAge, 2000);
+        game.increaseAge = setInterval(game.increaseAge, 2000); // change sec
         console.log('clicked');
         game.petDies();
     },
     increaseAge() {
-        pet.age += 7;
+        pet.age += 1;
         pet.updateAge();
-    }
+        game.petMorph();
+
+    },
+    petMorph() {
+        if (pet.age <= 0) {
+            $("#petPhoto").attr("src","/images/cemetary.jpg");
+        } else if(pet.age > 1 && pet.age <=4) {
+            $("#petPhoto").attr("src", "/images/puppy.jpg");
+        } else if (pet.age >4 && pet.age <= 12) {
+            $("#petPhoto").attr("src", "/images/adult.jpg");
+        } else if (pet.age >= 13) {
+            $("#petPhoto").attr("src", "/images/senior.jpg");
+        }
+    },
 };
 
 game.welcomeScreen();
