@@ -5,6 +5,7 @@ const pet = {
     hungerLevel: 10,
     sleepLevel: 10,
     boredLevel: 10,
+    age: 0,
     start(event) {
 
     
@@ -47,9 +48,12 @@ const pet = {
     reduceBoredom() {
         pet.boredLevel--;
     },
-    updateButton () {
+    updateButton() {
         document.getElementById("nameBtn").innerHTML = "Rename Pet";
         $("#inputName").toggle();
+    },
+    updateAge() {
+        document.getElementById("petAge").innerHTML = pet.age;
     }
 };
 
@@ -60,6 +64,9 @@ const game = {
         game.timer = setInterval(game.reduceTime, 2000);
         console.log('clicked');
         game.petDies();
+        game.ageTimer();
+        pet.updateAge();
+        console.log(pet.age);
     },
     // reduceTime : () => {
     reduceTime () {
@@ -84,7 +91,7 @@ const game = {
         }
     },
     welcomeScreen() {
-        $("#welcomeBanner").text(`Welcome, your pet ${pet.name} is doing . . `) ;
+        $("#welcomeBanner").text(`Your pet ${pet.name} is doing . . `) ;
         
     }, 
     hungerProgress() {
@@ -95,6 +102,15 @@ const game = {
     },
     boredProgress() {
         $("#boredBar").val(pet.boredLevel);
+    },
+    //increaseAge: null,
+    ageTimer() {
+        game.increaseAge = setInterval(game.increaseAge, 2000);
+        console.log('clicked');
+        game.petDies();
+    },
+    increaseAge() {
+        pet.age += 7;
     }
 };
 
@@ -107,16 +123,10 @@ $('#startButton').on('click', game.beginTimer);
 
 
 // Buttons
-
 $("#feedMe").on('click', pet.feedsPet);
 
 $("#lightsOff").on('click', pet.turnLightsOff);
 
 $("#play").on('click', pet.playWithPet);
-
-// use for getting name from input box 
-// var value = $( this ).val();
-
-//
 
 

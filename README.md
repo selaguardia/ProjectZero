@@ -5,9 +5,10 @@ Wireframe
 
 //== User Stories ==//
 
-1. The user lands on page with screen greeting 
+1. The user lands on page with screen greeting --done
     - the user asks for their pets name
-    - includes input box and 'adopt' button (**currently the start button**)
+    - includes input box and 'adopt' button
+    - should toggle between adopt and rename
 
 2. On the right side of the page there should be 3 buttons --done
     - each one should have an progress bar 
@@ -45,13 +46,16 @@ Wireframe
 - Create HTML layout --done
 - Create pet object --done
 - Create game Object --done
-- event listener once user enters name and clicks adopt timer should begin timer --done
+- event listener once user hits start timer should begin timer --done
 - event listener to increase levels by 1 --done
 - create timer --done
-- create event listeners to decrease levels by 1 every second
+- create event listeners to decrease levels by 1 every second --done
     - when 0 game over or revive pet
-- tie the reduce timer to update html element for the progress bar
+- tie the reduce timer to update html element for the progress bar --done
 - style the game
+- pets age
+- morph pet with age
+- move across screen while alive
 
 
 INCLUDED IN README --incomplete
