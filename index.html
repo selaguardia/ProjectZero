@@ -19,28 +19,32 @@
 <body>
     
     <section class="container">
-        <h1 id="welcomeBanner"></h1>
         <div class="petImage">
         
            <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80" alt="pet">
         </div>
         <div class="rightSide">
-            <button class="start" id="startButton">Start</button>
+            <h1 id="welcomeBanner"></h1>
+            <p>What would you like to name your pet?</p>
+            <input id="inputName" type="text">
+           
+            <button id="nameBtn">Adopt</button><br>
+            <button class="start" id="startButton">Start</button><br>
         
             
             <label for="file">Hunger:</label>
-            <progress id="file" max="10" value="10"> </progress>
+            <progress id="hungerBar" max="10" value="10"> </progress>
             <button id="feedMe">Feed Me</button><br>
 
             <label for="file">Sleepiness:</label>
-            <progress id="file" max="10" value="10">  </progress>
+            <progress id="sleepBar" max="10" value="10">  </progress>
             <button id="lightsOff">Lights Off</button><br>
 
             
             <label for="file">Boredom:</label>
-            <progress id="file" max="10" value="10">  </progress>
+            <progress id="boredBar" max="10" value="10">  </progress>
             <button id="play">Play with Me</button><br>
-            <button id="renamePet">Rename Pet</button>
+            
 
         </div>
         

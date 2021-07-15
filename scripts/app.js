@@ -25,13 +25,18 @@ const pet = {
             pet.boredLevel++;
         }
     },
-    startUp() {
-        pet.name = window.prompt("Hello, what would you like to name your pet?");
-        $("#renamePet").on('click', pet.renamePet);
+    namePet() {
+        pet.name = $("#inputName").val();
+        game.welcomeScreen();
+        pet.updateButton();
+        console.log(pet.name);
+
     },
     renamePet() {
-        pet.name = window.prompt("Hello, what would you like to name your pet?");
-        $("#renamePet").on('click', pet.renamePet);
+        pet.name = $("#inputName").val();
+        game.welcomeScreen();
+        console.log(pet.name);
+       
     },
     reduceHunger() {
         pet.hungerLevel--;
@@ -41,6 +46,10 @@ const pet = {
     },
     reduceBoredom() {
         pet.boredLevel--;
+    },
+    updateButton () {
+        document.getElementById("nameBtn").innerHTML = "Rename Pet";
+        $("#inputName").toggle();
     }
 };
 
@@ -50,14 +59,21 @@ const game = {
     beginTimer() {
         game.timer = setInterval(game.reduceTime, 2000);
         console.log('clicked');
-       // this.petDies();
+        game.petDies();
     },
     // reduceTime : () => {
     reduceTime () {
         game.time--;
+
         pet.reduceHunger();
+        game.hungerProgress();
+
         pet.reduceSleep();
+        game.sleepProgress();
+
         pet.reduceBoredom();
+        game.boredProgress();
+
         game.petDies();
         
     },
@@ -70,15 +86,25 @@ const game = {
     welcomeScreen() {
         $("#welcomeBanner").text(`Welcome, your pet ${pet.name} is doing . . `) ;
         
-    }  
+    }, 
+    hungerProgress() {
+         $("#hungerBar").val(pet.hungerLevel);
+    },
+    sleepProgress() {
+        $("#sleepBar").val(pet.sleepLevel);
+    },
+    boredProgress() {
+        $("#boredBar").val(pet.boredLevel);
+    }
 };
 
-pet.startUp();
 game.welcomeScreen();
+
+$("#nameBtn").on('click', pet.namePet);
 
 $('#startButton').on('click', game.beginTimer);
 
-$("#renameButton").on('click', pet.renamePet);
+
 
 // Buttons
 
