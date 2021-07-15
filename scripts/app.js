@@ -26,11 +26,11 @@ const pet = {
         }
     },
     startUp() {
-        let petName = window.prompt("Hello, what would you like to name your pet?");
+        pet.name = window.prompt("Hello, what would you like to name your pet?");
         $("#renamePet").on('click', pet.renamePet);
     },
     renamePet() {
-        petName = window.prompt("Hello, what would you like to name your pet?");
+        pet.name = window.prompt("Hello, what would you like to name your pet?");
         $("#renamePet").on('click', pet.renamePet);
     },
     reduceHunger() {
@@ -66,10 +66,15 @@ const game = {
             clearInterval(game.timer);
             console.log('Sorry you pet has died!');
         }
+    },
+    welcomeScreen() {
+        $("#welcomeBanner").text(`Welcome, your pet ${pet.name} is doing . . `) ;
+        
     }  
 };
 
 pet.startUp();
+game.welcomeScreen();
 
 $('#startButton').on('click', game.beginTimer);
 
@@ -87,4 +92,5 @@ $("#play").on('click', pet.playWithPet);
 // var value = $( this ).val();
 
 //
+
 
