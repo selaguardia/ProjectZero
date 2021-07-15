@@ -1,15 +1,15 @@
 const pet = {
     name: '',
-    hungerLevel: 5,
-    sleepLevel: 5,
-    boredLevel: 5,
+    hungerLevel: 10,
+    sleepLevel: 10,
+    boredLevel: 10,
     start(event) {
-        // gamew.reset
+
     
     },
     feedsPet() {
         if (pet.hungerLevel < 10) {
-            pet.hungerLevel--;
+            pet.hungerLevel++;
         }
     },
     turnLightsOff() {
@@ -36,7 +36,6 @@ const pet = {
         pet.boredLevel--;
     }
 };
-
 
 const game = {
     timer: null,
