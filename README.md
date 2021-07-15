@@ -1,11 +1,9 @@
 # ProjectZero
 
 Wireframe
-![alt text for image](./relative/path/to/image)
+!["wireframe"](./relative/path/to/image)
 
-// Add to README file
-
-// User Stories
+//== User Stories ==//
 
 1. The user lands on page with screen greeting 
     - the user asks for their pets name
@@ -43,6 +41,18 @@ Wireframe
     - pet should go from baby to adult
     - while alive pet should cross the screen
 
+//== Milestones ==//
+- Create HTML layout --done
+- Create pet object --done
+- Create game Object --done
+- event listener once user enters name and clicks adopt timer should begin timer --done
+- event listener to increase levels by 1 --done
+- create timer --done
+- create event listeners to decrease levels by 1 every second
+    - when 0 game over or revive pet
+- tie the reduce timer to update html element for the progress bar
+- style the game
+
 
 INCLUDED IN README --incomplete
 - explanation of what the project is and why you made it
@@ -53,6 +63,7 @@ INCLUDED IN README --incomplete
     - alert statements
     - iPad for wireframe
 - the approach taken
+    - Object based approach (add more detail)
 - installation instructions
 - unsolved problems
 
