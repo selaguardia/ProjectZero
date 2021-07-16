@@ -29,7 +29,7 @@ Wireframe
         - button shouldnt work because pet is happy
     - When bored the button should allow you to increment boredom levels by 1 everytime
 
-6. When the pet dies the photo should change and show a different pet
+6. When the pet dies the photo should change and show a different pet --done
     - When the pet dies the game is over but you can still restart the game with a new pet.
 
 7. Edit name button --done
@@ -38,9 +38,10 @@ Wireframe
 8. There should be a location to see the pets Age --done
     - pets age should increase every (i chose 1 min)
 
-9. Pet should morph at certain ages
+9. Pet should morph at certain ages --done
     - pet should go from baby to adult
-    - while alive pet should cross the screen
+
+10. while alive pet should cross the screen
 
 //== Milestones ==//
 - Create HTML layout --done
@@ -50,13 +51,11 @@ Wireframe
 - event listener to increase levels by 1 --done
 - create timer --done
 - create event listeners to decrease levels by 1 every second --done
-    - when 0 game over or revive pet
 - tie the reduce timer to update html element for the progress bar --done
-- style the game
-- pets age
-- morph pet with age
+- pets age --done
+- morph pet with age --done
 - move across screen while alive
-
+- style the game
 
 INCLUDED IN README --incomplete
 - explanation of what the project is and why you made it
