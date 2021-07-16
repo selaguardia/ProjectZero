@@ -59,13 +59,13 @@ const pet = {
 
 const game = {
     timer: null,
+    ageClock: null,
     time: 5,
     beginTimer() {
         game.timer = setInterval(game.reduceTime, 2000);
         console.log('clicked');
         game.petDies();
-        game.ageTimer();
-        
+        game.ageClock = setInterval(game.increaseAge, 2000);
         console.log(pet.age);
     },
     // reduceTime : () => {
@@ -87,8 +87,9 @@ const game = {
     petDies() {
         if (pet.hungerLevel <= 0 || pet.sleepLevel <= 0 || pet.boredLevel <= 0) {
             $("#petPhoto").attr("src", "/images/cemetary.jpg");
+            console.log($("#petPhoto").attr())
             clearInterval(game.timer);
-            clearInterval(pet.age);
+            clearInterval(game.ageClock);
             console.log('Sorry you pet has died!');
         }
     },
@@ -105,11 +106,10 @@ const game = {
     boredProgress() {
         $("#boredBar").val(pet.boredLevel);
     },
-    //increaseAge: null,
     ageTimer() {
-        game.increaseAge = setInterval(game.increaseAge, 2000); // change sec
-        console.log('clicked');
+         // change sec
         game.petDies();
+        console.log('clicked');
     },
     increaseAge() {
         pet.age += 1;
@@ -135,6 +135,7 @@ game.welcomeScreen();
 $("#nameBtn").on('click', pet.namePet);
 
 $('#startButton').on('click', game.beginTimer);
+$('#startButton').on('click', game.ageTimer);
 
 
 
