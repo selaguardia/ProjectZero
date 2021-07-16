@@ -71,21 +71,21 @@ const game = {
     
     petDies() {
         if (pet.hungerLevel <= 0) {
-            $("#petPhoto").attr("src", "/images/cemetary.jpg");
+            $("#petPhoto").attr("src", "./images/cemetary.jpg");
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
             console.log('Sorry you pet has died!');
         }
         if (pet.sleepLevel <= 0) {
-            $("#petPhoto").attr("src", "/images/cemetary.jpg");
+            $("#petPhoto").attr("src", "./images/cemetary.jpg");
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
             console.log('Sorry you pet has died!');
         }
         if (pet.boredLevel <= 0) {
-            $("#petPhoto").attr("src", "/images/cemetary.jpg");
+            $("#petPhoto").attr("src", "./images/cemetary.jpg");
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
@@ -134,13 +134,13 @@ const game = {
     },
     petMorph() {
         if (pet.age <= 0) {
-            $("#petPhoto").attr("src","/images/cemetary.jpg");
+            $("#petPhoto").attr("src","./images/cemetary.jpg");
         } else if(pet.age < 4) {
-            $("#petPhoto").attr("src", "/images/puppy.jpg");
+            $("#petPhoto").attr("src", "./images/puppy.jpg");
         } else if (pet.age < 10) {
-            $("#petPhoto").attr("src", "/images/adult.jpg");
+            $("#petPhoto").attr("src", "./images/adult.jpg");
         } else if (pet.age >= 10) {
-            $("#petPhoto").attr("src", "/images/senior.jpg");
+            $("#petPhoto").attr("src", "./images/senior.jpg");
         }
     },
 };
