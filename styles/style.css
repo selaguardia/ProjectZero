@@ -8,28 +8,45 @@
 }
 
 .container {
-border: 2px solid red;
-display: flex;
-justify-content: center;
-padding: 20px;
-align-items: center;
-max-width: 930px;
-background-color: lightblue;
-margin: auto auto;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    align-items: center;
+    width: 90vw;
+    /* max-width: 930px; */
+    background-color: lightblue;
+    margin: auto auto;
 }
 
-img {
-    width: 100%;
+.petImage {
+    /* width: 60%;
     height: 500px;
+    
+    
+    margin: 0;
+    padding: 0; */
+    /* border: 1px solid yellow; */
+    
+    
+
+  }
+
+  img {
+    height: 50vh;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
+    width: 700px;
   }
 
 .rightSide {
-background-color:lightblue;
-padding: 20px;
-width: 900px;
+    background-color:lightblue;
+    /* padding: 100px 0 100px 0; */
+    width: 600px;
+    /* border: 2px solid green; */
+    margin:0;
+    padding: 0 30px;
 
 }
 
@@ -46,5 +63,14 @@ button {
 }
 #petAge {
     background-color: lightblue;
+}
+
+.intro {
+    padding: 10px;
+    margin-left: 20px;
+}
+#title {
+    font-size: 50px;
+    text-align: center;
 }
 
