@@ -1,7 +1,7 @@
 # ProjectZero
 
 Wireframe
-!["wireframe"](./relative/path/to/image)
+!["wireframe"](/images/wireframe.jpg)
 
 //== User Stories ==//
 
@@ -41,7 +41,7 @@ Wireframe
 9. Pet should morph at certain ages --done
     - pet should go from baby to adult
 
-10. while alive pet should cross the screen
+10. while alive pet should cross the screen --done
 
 //== Milestones ==//
 - Create HTML layout --done
@@ -54,8 +54,8 @@ Wireframe
 - tie the reduce timer to update html element for the progress bar --done
 - pets age --done
 - morph pet with age --done
-- move across screen while alive
-- style the game
+- move across screen while alive --done
+- style the game --done
 
 INCLUDED IN README --incomplete
 - explanation of what the project is and why you made it

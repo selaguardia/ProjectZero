@@ -10,7 +10,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <link rel="stylesheet" href="styles/style.css">
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+        </style>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -23,29 +25,29 @@
 <body> 
     <section class="container">
         <div class="petImage"> 
-           <img class="animate__animated animate__bounceInDown" id="petPhoto" src="images/baby.jpg" alt="pet">
+           <img class="animate__animated animate__swing" id="petPhoto" src="images/baby.jpg" alt="pet">
         </div>
         <div class="rightSide">
-            <p>Hello, What would you like to name your pet?</p>
+            <p class="text">Hello, What would you like to name your pet?</p>
             <input id="inputName" type="text"><br><br>
             <button id="nameBtn">Adopt</button><br><br>
 
             <button class="start" id="startButton">Start Game</button><br><br>
-            <h1 id="welcomeBanner"></h1><br><br>
+            <h1 id="welcomeBanner" class="text"></h1><br><br>
             
-            <label for="file">Hunger:</label><br>
+            <label for="file" class="text">Hunger:</label><br>
             <progress id="hungerBar" max="10" value="10"></progress><br>
             <button id="feedMe">Feed Me</button><br><br>
 
-            <label for="file">Sleepiness:</label><br>
+            <label for="file" class="text">Sleepiness:</label><br>
             <progress id="sleepBar" max="10" value="10"></progress><br>
             <button id="lightsOff">Lights Off</button><br><br>
             
-            <label for="file">Boredom:</label><br>
+            <label for="file" class="text">Boredom:</label><br>
             <progress id="boredBar" max="10" value="10"></progress><br>
             <button id="play">Play with Me</button><br><br>
 
-            <p>Pet Age: <span id="petAge">Newborn</span></p>
+            <p class="text">Pet Age: <span id="petAge">Newborn</span></p>
         </div>     
     </section>  
 </body>
