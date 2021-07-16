@@ -44,6 +44,7 @@ Wireframe
 10. while alive pet should cross the screen --done
 
 //== Milestones ==//
+
 - Create HTML layout --done
 - Create pet object --done
 - Create game Object --done
@@ -57,18 +58,23 @@ Wireframe
 - move across screen while alive --done
 - style the game --done
 
-INCLUDED IN README --incomplete
-- explanation of what the project is and why you made it
-- user stories
-- explanations of the technologies used
-    - console.log
-    - element inspector
-    - alert statements
-    - iPad for wireframe
-- the approach taken
-    - Object based approach (add more detail)
-- installation instructions
-- unsolved problems
+This game was created so that users can play with an online pet when they need to take a break from their lives. 
+
+The technology used was console.log to check for errors and make sure the code was running properly, the element inspector to envision where i wanted to place the images and game content. I also used an iPad Pro to draw a mockup of how i envisioned my game. 
+
+Approach taken:
+Started with user stories then my wireframe. After i began adding content to the browser and then i began coding the javascript portion. Got stuck so went back and expanded and finished user stories, and added milestones. Then after understanding my steps I was able to easily finish the app. Now
+I took an object oriented approach seperating my game into two objects, the pet object and the game object. In side the objects, i included both vanilla javascript and jQuery, inlcuding functions,  if else statements and several methods including toggle.
+
+
+Installation Instuctions:
+None, you just play in the browser, 
+but... you can
+Fork this repo (optional)
+Launch the game
+
+Unsolved Propblem:
+The content on the right side of my image wont expand
 
 
     
