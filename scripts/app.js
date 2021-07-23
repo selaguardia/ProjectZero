@@ -30,13 +30,13 @@ const pet = {
         pet.name = $("#inputName").val();
         game.welcomeScreen();
         pet.updateButton();
-        console.log(pet.name);
+       // console.log(pet.name);
 
     },
     renamePet() {
         pet.name = $("#inputName").val();
         game.welcomeScreen();
-        console.log(pet.name);
+       // console.log(pet.name);
        
     },
     reduceHunger() {
@@ -75,21 +75,21 @@ const game = {
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
-            console.log('Sorry you pet has died!');
+            // console.log('Sorry you pet has died!');
         }
         if (pet.sleepLevel <= 0) {
             $("#petPhoto").attr("src", "./images/cemetary.jpg");
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
-            console.log('Sorry you pet has died!');
+           // console.log('Sorry you pet has died!');
         }
         if (pet.boredLevel <= 0) {
             $("#petPhoto").attr("src", "./images/cemetary.jpg");
            // console.log($("#petPhoto").attr())
             clearInterval(game.timer);
             clearInterval(game.ageClock);
-            console.log('Sorry you pet has died!');
+           // console.log('Sorry you pet has died!');
         }
     },
     
@@ -151,8 +151,6 @@ $("#nameBtn").on('click', pet.namePet);
 
 $('#startButton').on('click', game.beginTimer);
 $('#startButton').on('click', game.ageTimer);
-
-
 
 // Buttons
 $("#feedMe").on('click', pet.feedsPet);
